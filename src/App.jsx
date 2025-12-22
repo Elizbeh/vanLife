@@ -2,11 +2,12 @@ import React from 'react'
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import About from './pages/About';
 import Home from './pages/Home'
-import Navbar from './Navbar';
+import Navbar from './components/Navbar';
 import Vans from './pages/Vans';
 import './index.css'
-import Footer from './Footer';
+import Footer from './components/Footer';
 
+import '../server'
 function App() {
   return (
      <BrowserRouter>
