@@ -28,6 +28,11 @@ body {
     color: black;
     font-weight: bold;
 }
+
+.navlink:hover {
+    border-bottom: 2px solid #161616;
+    transition: all 0.3s ease;
+}
 nav {
     display: flex;
     gap: 1em;
@@ -89,19 +94,7 @@ nav {
 .cta-btn:hover{
     background-color: #fb781a;
 }
-.footer{
-    width: 100%;
-    background-color: #252525;
-    color: #AAAAAA;
-    height: 74.75px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.copyright{
-    font-size: 1.4em;
-    margin-right: .2em;
-}
+
 
 @media (max-width: 769px) {
    
@@ -118,8 +111,30 @@ nav {
     line-height: 1.5;
 }
 
-.footer{
 }
+
+
+@media (min-width: 1024px) {
+    .cta-btn{
+        width: 200px;
+    }
+    .title{
+        font-size: 4rem;
+    }
+}
+/**Footer**/
+.footer{
+    width: 100%;
+    background-color: #252525;
+    color: #AAAAAA;
+    height: 74.75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copyright{
+    font-size: 1.4em;
+    margin-right: .2em;
 }
 
 
@@ -131,11 +146,14 @@ nav {
 .vanlist-section{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    
     margin: 2em;
     gap: 3em 0;
 }
 
+.vanlist-section a{
+    text-decoration: none;
+    color: #161616;
+}
 
 .top{
     display: flex;
@@ -146,9 +164,9 @@ nav {
     margin-left: 2em;
     gap: 1em;
 }
-.card-img {
-    width: 240px;
-    height: 250px;
+.van-img {
+    width: 230px;
+    height: 230px;
     border-radius: 5px;
 }
 
@@ -165,23 +183,23 @@ nav {
     
 }
 
-.card-info {
-    width: 240px;
+.van-info {
+    width: 230px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     
 }
-.card-info .name {
+.van-info .name {
     font-size: 1.3rem;
     font-weight: bold;
 }
-.card-info .price {
+.van-info .price {
     margin-top: 1.1em;
     font-size: 1rem;
 }
-.card-info .price .day {
+.van-info .price .day {
     display: block;
     color: gray;
     font-size: 0.6em;
@@ -207,6 +225,8 @@ nav {
     background-color: #161616;
     color: #FFEAD0;;
 }
+
+
 @keyframes spin {
     from{
         transform: rotate(0deg);
@@ -214,4 +234,150 @@ nav {
     to {
         transform: rotate(360deg);
     }
+}
+
+
+/**Van Detail Page**/
+
+.return-link{
+    text-decoration: none;
+    color: #161616;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+}
+
+.van-detail-container {
+    width: 90%;
+    height: 100%;
+    margin: 3em;
+}
+
+.van-detail-img {
+    height: 490px;
+    width: 497px;
+    border-radius: 10px;
+}
+
+.van-detail-content {
+    margin-top: 4em;
+    width: 90%;
+}
+
+.van-detail-info {
+    margin-top: 2em;
+}
+
+.van-detail-info .type {
+    margin-bottom: 1em;
+}
+.van-detail-info .van-name {
+    margin-bottom: .5em;
+    font-size: 32px;
+}
+
+.van-detail-info .van-price{
+    font-weight: bold;
+    font-size: 24px;
+}
+.van-detail-info .day {
+    color: #161616;
+    font-size: 20px;
+    font-weight: 500;
+
+
+}
+
+.van-detail-info .van-description{
+    font: 16px;
+    line-height: 1.5;
+    margin: 1.2em 0;
+}
+
+.van-detail-btn {
+    width: 100%;
+    padding: 12px 18px;
+    margin: 2em 0;
+    border-radius: 5px;
+    border: none;
+    background-color: #FF8C38;
+    color: white;
+    font-weight: 18px;
+    font-weight: bold;
+    font-family: inherit;
+}
+.van-detail-btn:hover {
+    background-color:  #fb7211;
+}
+
+@media (min-width: 768px) {
+  /* tablet styles */
+}
+
+@media (min-width: 1024px) {
+
+    .van-detail-container {
+        margin: 5em;
+    }
+  /* laptop styles */
+  .van-detail-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+    justify-content: center;
+    gap: 5em;
+  }
+
+  .van-detail-btn {
+    width: 150px;
+    padding: 18px 24px;
+
+  }
+}
+
+
+/**About Page**/
+
+.about-container {
+    width: 100%;
+    height: 1000%;
+}
+.about-img {
+    width: 100%;
+}
+.about-text {
+    width: 90%;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    line-height: 1.5;
+}
+.about-title{
+    margin-bottom: 2em;
+}
+
+.about-banner {
+    width: 90%;
+    background-color: #FFCC8D;
+    height: 250px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+    padding: 1.5em;
+    margin-bottom: 3em;
+}
+.banner-title {
+    font-size: 2.5rem;
+}
+.about-btn{
+    padding: 1em;
+    font-weight: bold;
+    background-color: #161616;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px
 }

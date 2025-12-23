@@ -3,6 +3,7 @@ import VanCard from '../components/VanCard'
 import { useEffect } from 'react'
 import { FaSyncAlt } from "react-icons/fa";
 import LoadingIcon from '../components/LoadingIcon';
+import { Link } from 'react-router-dom';
 
 function Vans() {
 
@@ -39,13 +40,18 @@ function Vans() {
       </div>
       <section className='vanlist-section'>
         {vans.map(van => (
-          <VanCard
+          <Link to={`/vans/${van.id}`} 
+            aria-label={`View details for ${van.name}, 
+            priced at $${van.price} per day`}
+          >
+            <VanCard
             key={van.id}
             imageUrl={van.imageUrl}
             name={van.name}
             price={van.price}
             type={van.type}
           />
+          </Link>
         ))}
       </section>
     </main>
