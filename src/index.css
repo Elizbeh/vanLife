@@ -351,12 +351,15 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    line-height: 1.5;
 }
 .about-title{
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
+.about-mission, .team-mission {
+    line-height: 1.5;
+    font-size: 1rem;
+}
 .about-banner {
     width: 90%;
     background-color: #FFCC8D;
@@ -367,7 +370,9 @@ nav {
     align-items: start;
     justify-content: space-around;
     padding: 1.5em;
-    margin-bottom: 3em;
+    margin-bottom:  5em ;
+    margin-top: 3em;
+    border-radius: 10px;
 }
 .banner-title {
     font-size: 2.5rem;
@@ -380,4 +385,24 @@ nav {
     font-size: 1rem;
     border: none;
     border-radius: 5px
+}
+
+@media (min-width: 1024px) {
+
+    .about-text{
+        height: 100%;
+    }
+    .about-banner, .about-text {
+        width: 80%;
+    }
+    .about-title {
+        font-size: 4rem;
+        line-height: none;
+    }
+    .about-mission, .team-mission{
+        font-size: 1.2rem;
+    }
+      .about-mission{
+        margin-bottom: 2em;
+      }
 }
