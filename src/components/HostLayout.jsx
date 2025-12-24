@@ -21,8 +21,7 @@ function HostLayout() {
         </NavLink>
         <NavLink to="income" className="navlink">Income</NavLink>
         <NavLink to="vans" className="navlink">Vans</NavLink>
-        <NavLink to="reviews" className="navlink">Reviews
-</NavLink>
+        <NavLink to="reviews" className="navlink">Reviews</NavLink>
     </nav>
     {<Outlet/>}
     </>

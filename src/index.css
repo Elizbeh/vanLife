@@ -194,7 +194,7 @@ nav {
     align-items: start;
 }
 .loading-icon{
-    font-size: 3em;
+    font-size: 1.5 em;
     animation: spin 1s linear infinite;
     
 }
@@ -499,25 +499,24 @@ nav {
   .host-van-details-container{
     padding: 0 2em;
     height: 100%;
-
+    
   }
-  .host-van-detail-content{
+  .host-van-detail-page{
     background-color: white;
     padding: 2em;
     border-radius: 10px;
-    margin-top: 2em;
-    margin-bottom: 4em;
+    margin: 2em 3em;
 
   }
   .host-van-detail-header{
     display: flex;
     align-items: center;
     gap: 1em;
-    margin-bottom: 2em;
   }
   .host-van-detail-img{
     width: 161px;
     border-radius: 10px;
+    margin-left: 1em;
   }
   .host-van-detail-right{
     height: 120px;
@@ -525,9 +524,7 @@ nav {
     flex-direction: column;
     justify-content: space-around;
   }
-  .host-van-detail-type{
-
-  }
+ 
   .host-van-detail-name{
     font-size: 1.5rem;
     font-weight: bold;
@@ -553,25 +550,32 @@ nav {
       }
    
   
-  .host-van-detail-section{
+  .host-van-info{
     height: 260px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
   }
-   .host-van-detail-section-name span, 
-   .host-van-detail-section-name span, 
-   .host-van-detail-section-category span,
+   .host-van-info span,
    .visibility{
     font-weight: bold;
    }
-  .host-van-detail-section-description span{
+  .host-van-info:nth-child(3){
     line-height: 1.5;
   }
   .p{
     font-weight: 400;
   }
-  .host-van-links{
+  .host-van-detail .return-link{
+    margin-left: 3em;
+  }
 
+  .host-van-detail .host-layout-links{
+    margin-left: 0;
+  }
+
+  .van-photo{
+    width: 103px;
+    height: 102px;
   }

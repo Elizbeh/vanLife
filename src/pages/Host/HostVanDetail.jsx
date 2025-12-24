@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react'
-import { useParams, NavLink } from 'react-router-dom'
+import { useParams, NavLink, Outlet} from 'react-router-dom'
 import LoadingIcon from '../../components/LoadingIcon'
+
 
 function HostVanDetail() {
   const [van, setVan] = React.useState(null)
   const {id} = useParams()
+
 
   useEffect(()=> {
     fetch(`/api/host/vans/${id}`)
@@ -14,7 +16,6 @@ function HostVanDetail() {
         return
       }
       setVan(data.vans[0])
-      console.log(data.vans[0])
     })
     .catch(err => console.log("Something went wrong", err))
   }, [id])
@@ -23,8 +24,10 @@ function HostVanDetail() {
   if (!van) return <LoadingIcon/>
 
   return (
-    <div className='host-van-details-container'>
-      <NavLink to=".." relative="path"> ← Back to all vans</NavLink>
+    <div className='host-van-detail'>
+    <NavLink className="return-link" to=".." relative="path"> ← Back to all vans</NavLink>
+    <div className='host-van-detail-page'> 
+        <div className='host-van-details-container'>
       <div className='host-van-detail-content'>
         <div className='host-van-detail-header'>
             <img className='host-van-detail-img' src={van.imageUrl} alt="" />
@@ -38,6 +41,15 @@ function HostVanDetail() {
       <div >
       </div>
       </div>
+        <nav className='host-layout-links'>
+                <NavLink to="." path="relative">Details</NavLink>
+                <NavLink to="pricing" className="navlink">Pricing</NavLink>
+                <NavLink to="photo" className="navlink">Photo</NavLink>
+        </nav>
+        {<Outlet context={{van}}/>}
+        
+    </div></div>
+
   )
 }
 
