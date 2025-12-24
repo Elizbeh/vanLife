@@ -7,6 +7,7 @@
 body {
     background-color: #FFF7ED;
 }
+/**Header**/
 
 .header{
     width: 90%;
@@ -19,20 +20,29 @@ body {
     text-decoration: none;
     color: #000000;
     font-weight: bold;
-    margin-left: 5.5em;
+    margin-left: 3em;
+    font-size: 1.6em;
 }
 
 .navlink {
     text-decoration: none;
     font-size: 1.2rem;
     color: black;
-    font-weight: bold;
+    font-weight: 500;
+}
+
+.navlink.active {
+
+    text-decoration: underline;
+    color: #161616;
 }
 
 .navlink:hover {
-    border-bottom: 2px solid #161616;
+    color:  #FF8C38;;
     transition: all 0.3s ease;
 }
+
+
 nav {
     display: flex;
     gap: 1em;
@@ -43,7 +53,13 @@ nav {
         
     }
     .logo {
-        margin-left: 3.5em;
+        margin-left: 2em
+    }
+
+}
+    @media (min-width: 1024px) {
+       .logo {
+        font-size: 2rem;
     }
 }
 /**Home**/
@@ -406,3 +422,156 @@ nav {
         margin-bottom: 2em;
       }
 }
+
+
+
+/**Host Layout Link**/
+.host-layout-links  {
+  display: flex;
+  margin: 3em;
+}
+ .host-layout-links a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #161616;
+ }
+
+  .host-layout-links a:hover {
+    font-weight: bold;
+  }
+
+
+  /**Host Vans**/
+  .host-vans-container {
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+  }
+   .tile-heading{
+    margin: 0 .5em;
+    font-size: 2rem;
+    margin-bottom: 1em;
+  }
+  .tile-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .tile-container-links {
+    text-decoration: none;
+  }
+ .tile-content{
+    width: 90%;
+    height: 102px;
+    background-color: white;
+    margin-bottom: 1em;
+    color: #161616;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    margin-left: 3em;
+    padding: 1em 1.5em;
+    border-radius: 5px;
+  }
+  .tile-image{
+    width: 66px;
+    height: 66px;
+    border-radius: 5px;
+  }
+  .tile-details{
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .tile-van-name{
+    font-size: 1.5rem;
+    font-weight: 500;
+
+  }
+  .tile-price{
+    font-size: .879rem
+  }
+
+
+  /**Host Van Details**/
+
+  .host-van-details-container{
+    padding: 0 2em;
+    height: 100%;
+
+  }
+  .host-van-detail-content{
+    background-color: white;
+    padding: 2em;
+    border-radius: 10px;
+    margin-top: 2em;
+    margin-bottom: 4em;
+
+  }
+  .host-van-detail-header{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 2em;
+  }
+  .host-van-detail-img{
+    width: 161px;
+    border-radius: 10px;
+  }
+  .host-van-detail-right{
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .host-van-detail-type{
+
+  }
+  .host-van-detail-name{
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .host-van-detail-price{
+    font-weight: bold;
+  }
+   .host-van-detail-price span{
+    font-weight: 400;
+   }
+   .host-van-links{
+    display: flex;
+    margin-bottom: 2em;
+   }
+   .host-van-detail-content .host-van-links .navlink{
+    margin-right: 2em;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+   }
+      .host-van-detail-content .host-van-links .navlink.active{
+        border-bottom: 2px solid black;
+      }
+   
+  
+  .host-van-detail-section{
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+   .host-van-detail-section-name span, 
+   .host-van-detail-section-name span, 
+   .host-van-detail-section-category span,
+   .visibility{
+    font-weight: bold;
+   }
+  .host-van-detail-section-description span{
+    line-height: 1.5;
+  }
+  .p{
+    font-weight: 400;
+  }
+  .host-van-links{
+
+  }

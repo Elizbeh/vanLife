@@ -2,24 +2,39 @@ import React from 'react'
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import About from './pages/About';
 import Home from './pages/Home'
-import Navbar from './components/Navbar';
-import Vans from './pages/Vans';
-import VanDetail from './pages/VanDetail';
+import Vans from './pages/Van/Vans';
+import VanDetail from './pages/Van/VanDetail';
 import './index.css'
-import Footer from './components/Footer';
-
 import '../server'
+import Layout from './components/Layout';
+import DashBoard from './pages/Host/DashBoard';
+import Income from './pages/Host/Income';
+import Reviews from './pages/Host/Reviews';
+import HostLayout from './components/HostLayout';
+import HostVans from './pages/Host/HostVans';
+import HostVanDetail from './pages/Host/HostVanDetail';
+
+
 function App() {
   return (
      <BrowserRouter>
-     <Navbar />
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/vans" element={<Vans/>}/>
-        <Route path='/vans/:id' element={<VanDetail/>}/>
+        <Route path='/' element={<Layout/>}>
+            <Route index element={<Home/>}/>
+            <Route path="about" element={<About/>}/>
+            <Route path="vans" element={<Vans/>}/>
+            <Route path='vans/:id' element={<VanDetail/>}/>
+
+            <Route path='host' element={<HostLayout/>}>
+                <Route index element={<DashBoard/>}/>
+                <Route path='income' element={<Income/>}/>
+                <Route path='reviews' element={<Reviews/>}/>
+                <Route path="vans" element={<HostVans/>}/>
+                <Route path="vans/:id" element={<HostVanDetail/>}/>
+            </Route>
+            
+        </Route>
       </Routes>
-      <Footer/>
     </BrowserRouter>
   )
 }

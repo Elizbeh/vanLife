@@ -1,8 +1,7 @@
 import React from 'react'
-import VanCard from '../components/VanCard'
+import VanCard from '../../components/VanCard'
 import { useEffect } from 'react'
-import { FaSyncAlt } from "react-icons/fa";
-import LoadingIcon from '../components/LoadingIcon';
+import LoadingIcon from '../../components/LoadingIcon';
 import { Link } from 'react-router-dom';
 
 function Vans() {
